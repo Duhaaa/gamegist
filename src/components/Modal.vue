@@ -56,7 +56,7 @@
 						</p>
 						<h3>Website</h3>
 						<p>
-							<a class="game-website" :href="game.website" target="_blank">{{
+							<a class="game-website break-all" :href="game.website" target="_blank">{{
 								game.website ? game.website : '-'
 							}}</a>
 						</p>
