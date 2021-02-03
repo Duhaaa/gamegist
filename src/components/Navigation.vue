@@ -29,7 +29,7 @@
 			<div>
 				<router-link
 					to="/favorite"
-				><i :class="$router.currentRoute.value.name == 'Favorite' ? 'active' : ''" class="ri-star-fill fav"></i></router-link>
+				><i class="ri-star-fill fav" :class="$router.currentRoute.value.name == 'Favorite' ? 'active' : ''"></i></router-link>
 			</div>
 		</div>
 	</nav>

@@ -28,7 +28,7 @@
 							</p>
 							<div class="btn-wrapper absolute mr-2 mt-1">
 								<i
-									class="close-btn ri-close-circle-fill"
+									class="ri-close-circle-fill close-btn "
 									@click.stop="removeFavorite(favGame)"
 								></i>
 							</div>
