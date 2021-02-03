@@ -1,8 +1,8 @@
 <template>
 	<div class="modal-bg flex items-center" @click="hideModal">
-		<div class="modal rounded container sm:mx-auto mx-4" @click.stop>
-			<div class="block sm:flex">
-				<div class="w-full sm:w-1/3">
+		<div class="modal rounded container md:mx-auto mx-4" @click.stop>
+			<div class="block md:flex">
+				<div class="w-full md:w-1/3">
 					<div
 						class="game-img rounded-br"
 						:style="{
@@ -12,7 +12,7 @@
 						}"
 					></div>
 					<div class="px-10 mt-4">
-						<h1 class="block sm:hidden game-title tracking-widest" v-if="game.name">
+						<h1 class="block md:hidden game-title tracking-widest" v-if="game.name">
 							{{ game.name.toUpperCase() }}
 						</h1>
 						<h3>Metascore</h3>
@@ -62,16 +62,16 @@
 						</p>
 					</div>
 				</div>
-				<div class="w-full sm:w-2/3 px-10 sm:mx-10 mt-20 sm:mt-4">
-					<h1 class="hidden sm:block game-title tracking-widest" v-if="game.name">
+				<div class="w-full md:w-2/3 px-10 md:mx-10 mt-20 md:mt-4">
+					<h1 class="hidden md:block game-title tracking-widest" v-if="game.name">
 						{{ game.name.toUpperCase() }}
 					</h1>
 					<h2>About</h2>
 					<div class="game-content" v-html="game.description"></div>
 				</div>
 			</div>
-			<div class="w-full px-10 mt-10 sm:mt-4 mb-4">
-				<button class="close-btn w-full sm:w-1/5 py-1 rounded tracking-wide sm:ml-auto" @click="hideModal">CLOSE</button>
+			<div class="w-full px-10 mt-10 md:mt-4 mb-4">
+				<button class="close-btn w-full md:w-1/5 py-1 rounded tracking-wide sm:ml-auto" @click="hideModal">CLOSE</button>
 			</div>
 		</div>
 	</div>

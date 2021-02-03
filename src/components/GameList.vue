@@ -161,4 +161,10 @@ import gsap from "gsap";
     display: block;
   }
 }
+
+@media (max-width: 768px ) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 </style>
