@@ -2,7 +2,7 @@
   <div class="card-container container mx-auto">
       <transition-group name="cards" :css="false" @before-enter="beforeEnter" @enter="enter" @leave="leave" appear mode="out-in">
       <div class="card mb-4 sm:px-2" v-for="(game, index) in games" :key="game.id" :data-index="index">
-        <div class="card-item rounded hover:shadow-lg" @click="getGameById(game.id)">
+        <div class="card-item rounded hover:shadow-lg no-select" @click="getGameById(game.id)">
           <img class="rounded" :src="game.background_image" :alt="game.name">
           <div class="p-4">
             <p class="game-name text-white text-sm leading-loose tracking-widest">{{game.name.toUpperCase()}}</p>
@@ -166,5 +166,15 @@ import gsap from "gsap";
   .card-container {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.no-select {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 </style>
