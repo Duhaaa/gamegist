@@ -62,7 +62,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="w-full sm:w-2/3 px-10 sm:mx-10 mt-4">
+				<div class="w-full sm:w-2/3 px-10 sm:mx-10 mt-20 sm:mt-4">
 					<h1 class="hidden sm:block game-title tracking-widest" v-if="game.name">
 						{{ game.name.toUpperCase() }}
 					</h1>
@@ -70,7 +70,7 @@
 					<div class="game-content" v-html="game.description"></div>
 				</div>
 			</div>
-			<div class="w-full px-10 mt-4 mb-4">
+			<div class="w-full px-10 mt-10 sm:mt-4 mb-4">
 				<button class="close-btn w-full sm:w-1/5 py-1 rounded tracking-wide sm:ml-auto" @click="hideModal">CLOSE</button>
 			</div>
 		</div>
@@ -145,15 +145,15 @@ export default {
   color: #222;
 }
 
-.modal h3 {
+.game-content >>> h3, .modal h3 {
   margin-top: 45px;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: bold !important;
   color: #222;
   letter-spacing: .05em;
 }
 
-.modal p {
+.game-content >>> p, .modal p {
   margin-top: 10px;
   color: gray;
 }
@@ -198,6 +198,9 @@ export default {
 	.game-img {
 		min-height: 199px;
 		max-height: 200px;
+	}
+	.game-title {
+		font-size: 1.2rem;
 	}
 }
 </style>

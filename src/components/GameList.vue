@@ -1,8 +1,5 @@
 <template>
   <div class="card-container container mx-auto">
-      <div v-if="!games">
-        <h2>No games found.</h2>
-      </div>
       <transition-group name="cards" :css="false" @before-enter="beforeEnter" @enter="enter" @leave="leave" appear mode="out-in">
       <div class="card mb-4 sm:px-2" v-for="(game, index) in games" :key="game.id" :data-index="index">
         <div class="card-item rounded hover:shadow-lg" @click="getGameById(game.id)">

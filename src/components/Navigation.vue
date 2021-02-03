@@ -26,13 +26,11 @@
 					/>
 				</form>
 			</div>
-			<div class="">
+			<div>
 				<router-link
 					to="/favorite"
 					exact
-					tag="i"
-					class="ri-star-fill fav"
-				></router-link>
+				><i :class="$router.currentRoute.value.name == 'Favorite' ? 'active' : ''" class="ri-star-fill fav"></i></router-link>
 			</div>
 		</div>
 	</nav>
